@@ -1,14 +1,19 @@
 {
   "type": "module",
   "scripts": {
-    "test": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "format-files": "npx prettier --write .",
+    "lint-files": "npx eslint .",
+    "pre-commit": "npx lint-staged",
+    "prepare": "husky install",
+    "test": "npx vitest",
+    "test:coverage": "npx vitest run --coverage"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
+    "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
     "typescript": "^5.0.4",
     "vitest": "^0.30.1"
